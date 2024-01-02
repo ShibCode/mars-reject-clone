@@ -113,18 +113,8 @@ const Poster = () => {
       animation: poster,
       trigger: ".poster-wrapper",
       start: "top 20px",
+      end: "bottom 50%",
       scrub: 1,
-    });
-
-    gsap.to("body", {
-      backgroundColor: "#021120",
-      duration: 0.3,
-      scrollTrigger: {
-        trigger: ".poster-wrapper",
-        toggleActions: "play reverse play reverse",
-        start: "top 40%",
-        end: "bottom 80%",
-      },
     });
 
     gsap.fromTo(
@@ -133,7 +123,7 @@ const Poster = () => {
       {
         rotateZ: 0,
         rotateX: 0,
-        y: -10,
+        y: 0,
         duration: 2,
         scrollTrigger: {
           trigger: ".poster",
@@ -156,7 +146,7 @@ const Poster = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center -mt-12">
       <div className="relative poster-wrapper w-full flex flex-col items-center h-[560vh]">
         <div className="absolute w-[1100px] z-10 h-[560vh] py-[110vh] flex flex-col justify-between">
           {cards.map((card, index) => (
@@ -179,8 +169,8 @@ const Poster = () => {
           ))}
         </div>
 
-        <div className="max-w-[450px] sticky top-0 h-screen flex items-center poster">
-          <div className="relative">
+        <div className="max-w-[450px] sticky top-0 h-screen flex items-center">
+          <div className="relative poster">
             <img src="/poster-1.jpg" alt="..." />
             <img
               src="/poster-2.png"
