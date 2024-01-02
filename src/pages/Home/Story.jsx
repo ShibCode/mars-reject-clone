@@ -15,7 +15,6 @@ const Story = () => {
         trigger: para.current,
         start: "top 95%",
         end: "bottom 5%",
-        markers: true,
         onUpdate: ({ progress }) => {
           spans.forEach((span, i) => {
             gsap.to(span, {
