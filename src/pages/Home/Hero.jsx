@@ -2,6 +2,10 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { duplicate } from "../../utils/duplicate";
 import { ScrollTrigger } from "gsap/all";
+import Web from "../../svg/Web";
+import CircleLineThrough from "../../svg/CircleLineThrough";
+import CircleDoubleLineThrough from "../../svg/CircleDoubleLineThrough";
+import MatrixCode from "../../svg/MatrixCode";
 
 const frontCharacters = [
   "/hero-character-front-1.webp",
@@ -48,7 +52,7 @@ const Hero = () => {
     gsap.to(wrapper.current, {
       scrollTrigger: {
         trigger: wrapper.current,
-        end: "+=1500",
+        end: "+=1200",
         pin: true,
       },
     });
@@ -69,7 +73,7 @@ const Hero = () => {
       opacity: 1,
     });
 
-    gsap.to(contentWrapper.current, {
+    gsap.to(wrapper.current, {
       scrollTrigger: {
         ...heroTrigger,
         scrub: false,
@@ -103,28 +107,28 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={wrapper} className="h-screen relative z-0 flex hero-wrapper">
+    <div ref={wrapper} className="h-screen relative z-0 flex text-lightRed">
       <div
         ref={contentWrapper}
-        className="w-full flex flex-col items-center text-center justify-center gap-6 text-lightRed"
+        className="w-full flex flex-col items-center text-center justify-center gap-2.5 sm:gap-4 md:gap-6"
       >
-        <div className="relative w-[130px] grid place-items-center">
+        <div className="relative w-[min(20vw,100px)] sm:w-[130px] grid place-items-center">
           <video
             src="/skull-rotating.mp4"
             autoPlay
             loop
-            className="absolute w-[45px] -z-10"
+            className="absolute w-[34%] -z-10"
           ></video>
-          <img src="/web.svg" alt="" />
+          <Web />
         </div>
 
-        <h1 className="text-[42px] sm:text-[65px] md:text-[90px] lg:text-[115px] xl:text-[140px] leading-[0.8em] font-druk mt-4">
+        <h1 className="text-[min(8vw,52px)] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[140px] leading-[0.8em] font-druk mt-4">
           MARS <br /> REJECTS
         </h1>
 
         <p
           ref={para}
-          className="text-[20px] font-semibold font-interTight max-w-[600px] leading-[1.2] opacity-0"
+          className="sm:text-lg md:text-xl font-semibold font-interTight max-w-[600px] w-[63%] sm:w-[70%] !leading-[1.2] opacity-0"
         >
           A unique collection of 10,000 characters brought to life as NFTs.
           Created by Pepe Torrado, The Mars Rejects live in a universe crafted
@@ -135,11 +139,33 @@ const Hero = () => {
           ref={signature}
           src="/hero-signature.svg"
           alt="signature"
-          className="w-[110px] mt-4 opacity-0"
+          className="w-[80px] sm:w-[110px] mt-2 sm:mt-4 opacity-0"
         />
       </div>
 
       <div className="absolute inset-0 bg-redRadial opacity-25"></div>
+
+      <div className="absolute inset-4 sm:inset-6 md:inset-10 z-20">
+        <div className="w-[16px] absolute top-0 left-0 h-[16px] border border-current rounded-full"></div>
+
+        <div className="w-[17px] absolute top-0 right-0">
+          <CircleLineThrough />
+        </div>
+
+        <div className="w-[17px] absolute bottom-0 left-0">
+          <CircleDoubleLineThrough />
+        </div>
+
+        <div className="w-[16px] absolute bottom-0 right-0 h-[16px] bg-current rounded-full"></div>
+
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[6px]">
+          <MatrixCode />
+        </div>
+
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[6px] rotate-180">
+          <MatrixCode />
+        </div>
+      </div>
 
       <div ref={characterSlideShow} className="absolute inset-0">
         <div className="flex items-end absolute bottom-0 z-10">

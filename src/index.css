@@ -6,8 +6,20 @@
 
 @font-face {
   font-family: Druk Wide Super;
-  src: url("/public/Druk\ Wide\ Web\ Super\ Regular.ttf");
+  src: url("/fonts/Druk\ Wide\ Web\ Super\ Regular.ttf");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: Crime Fighter BB;
+  src: url("/fonts/crimefighter-regular.TTF");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Crime Fighter BB;
+  src: url("/fonts/crimefighter-bold.TTF");
+  font-weight: 700;
 }
 
 body {

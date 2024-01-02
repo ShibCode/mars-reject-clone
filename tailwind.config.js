@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         druk: "Druk Wide Super",
         interTight: "Inter Tight",
+        crime: "Crime Fighter BB",
       },
       colors: { blueCharcoal: "#021120", lightRed: "#f74a53" },
       backgroundImage: {
