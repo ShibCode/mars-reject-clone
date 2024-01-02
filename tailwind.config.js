@@ -7,6 +7,7 @@ export default {
         druk: "Druk Wide Super",
         interTight: "Inter Tight",
         crime: "Crime Fighter BB",
+        tightSpot: "Tight Spot BB",
       },
       colors: { blueCharcoal: "#021120", lightRed: "#f74a53" },
       backgroundImage: {

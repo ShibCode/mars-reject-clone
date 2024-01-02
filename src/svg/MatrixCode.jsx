@@ -4,7 +4,7 @@ const MatrixCode = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 6 150"
       id="svg2122007648"
     >

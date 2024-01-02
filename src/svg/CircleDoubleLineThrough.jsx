@@ -12,22 +12,22 @@ const CircleDoubleLineThrough = () => {
         d="M 0.809 8.308 C 0.809 4.165 4.166 0.808 8.309 0.808 C 12.451 0.808 15.809 4.165 15.809 8.308 C 15.809 12.45 12.451 15.808 8.309 15.808 C 4.166 15.808 0.809 12.45 0.809 8.308 Z"
         fill="transparent"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-dasharray=""
+        strokeMiterlimit="10"
+        strokeDasharray=""
       ></path>
       <path
         d="M 16.309 16.308 L 0.001 -0"
         fill="transparent"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-dasharray=""
+        strokeMiterlimit="10"
+        strokeDasharray=""
       ></path>
       <path
         d="M 16.309 0.307 L 0.051 16.565"
         fill="transparent"
         stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-dasharray=""
+        strokeMiterlimit="10"
+        strokeDasharray=""
       ></path>
     </svg>
   );
