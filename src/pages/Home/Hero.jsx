@@ -2,10 +2,10 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { duplicate } from "../../utils/duplicate";
 import { ScrollTrigger } from "gsap/all";
-import Web from "../../svg/Web";
 import CircleLineThrough from "../../svg/CircleLineThrough";
 import CircleDoubleLineThrough from "../../svg/CircleDoubleLineThrough";
 import MatrixCode from "../../svg/MatrixCode";
+import Logo from "../../svg/Logo";
 
 const frontCharacters = [
   "/hero-character-front-1.webp",
@@ -113,13 +113,7 @@ const Hero = () => {
         className="w-full flex flex-col items-center text-center justify-center gap-2.5 sm:gap-4 md:gap-6"
       >
         <div className="relative w-[min(20vw,100px)] sm:w-[130px] grid place-items-center">
-          <video
-            src="/skull-rotating.mp4"
-            autoPlay
-            loop
-            className="absolute w-[34%] -z-10"
-          ></video>
-          <Web />
+          <Logo />
         </div>
 
         <h1 className="text-[min(8vw,52px)] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[140px] leading-[0.8em] font-druk mt-4">

@@ -9,6 +9,7 @@ const App = () => {
   return (
     <>
       <Home />
+      {/* <div className="h-screen"></div> */}
     </>
   );
 };
