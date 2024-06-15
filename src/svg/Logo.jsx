@@ -1,6 +1,6 @@
 import React from "react";
 
-const Logo = ({ showScroll }) => {
+const Logo = () => {
   return (
     <svg
       width="120"
@@ -9,6 +9,7 @@ const Logo = ({ showScroll }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       id="svg708524658_11927"
+      className="w-full"
     >
       <g clip-path="url(#svg708524658_11927_clip0_973_3113)">
         <path

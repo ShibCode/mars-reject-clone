@@ -1,8 +1,15 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "500px",
+        ...defaultTheme.screens,
+      },
+
       fontFamily: {
         druk: "Druk Wide Super",
         drukMedium: "Druk Wide Medium",
@@ -13,7 +20,7 @@ export default {
       },
       colors: {
         blueCharcoal: "#021120",
-        lightRed: "#f74a53",
+        lightRed: "#f84a53",
       },
       backgroundImage: {
         redRadial:

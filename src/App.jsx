@@ -7,6 +7,8 @@ const App = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    ScrollTrigger.normalizeScroll(true);
+
     window.scrollTo(0, 0);
   }, []);
 

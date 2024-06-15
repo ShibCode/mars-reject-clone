@@ -48,7 +48,7 @@ const Hero = () => {
     gsap.to(wrapper.current, {
       scrollTrigger: {
         trigger: wrapper.current,
-        end: "+=1200",
+        end: "+=600",
         pin: true,
       },
     });
@@ -57,7 +57,6 @@ const Hero = () => {
       trigger: ".content-wrapper",
       start: "50px top",
       end: "+=100",
-      // markers: true,
       scrub: 1,
     };
 
@@ -95,7 +94,7 @@ const Hero = () => {
       scrollTrigger: {
         trigger: wrapper.current,
         start: "top top",
-        end: "+20",
+        end: "+80",
         scrub: 1,
       },
       opacity: 0,
@@ -109,12 +108,12 @@ const Hero = () => {
       className="h-screen w-full relative z-0 flex text-lightRed"
     >
       {/* <div className="w-full overflow-hidden"> */}
-      <div className="content-wrapper w-full flex flex-col items-center text-center justify-center gap-2.5 sm:gap-4 md:gap-6">
-        <div className="relative w-[min(20vw,100px)] sm:w-[130px] grid place-items-center">
+      <div className="content-wrapper w-full flex flex-col items-center text-center justify-center gap-4 md:gap-6">
+        <div className="relative w-[90px] sm:w-[130px] flex justify-center -mb-2 sm:mb-0">
           <Logo />
         </div>
 
-        <h1 className="text-[min(8vw,52px)] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[120px] leading-[0.8em] font-druk mt-4">
+        <h1 className="text-[min(8vw,52px)] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[120px] leading-[0.85em] xs:leading-[0.8em] font-druk mt-4">
           MARS <br /> REJECTS
         </h1>
 

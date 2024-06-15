@@ -11,12 +11,14 @@ const Accordian = ({ question, answer }) => {
           : "bg-white text-lightRed border-lightRed border-opacity-25"
       }`}
     >
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-[5vw]">
         <div
           onClick={() => setIsExpanded((prev) => !prev)}
-          className="flex justify-between py-6 cursor-pointer select-none"
+          className="flex justify-between py-4 xs:py-6 cursor-pointer select-none gap-4"
         >
-          <p className="font-drukMedium font-[15px]">{question}</p>
+          <p className="font-drukMedium text-xs xs:text-[13px] sm:text-[15px]">
+            {question}
+          </p>
 
           <div className="w-4 aspect-square relative grid place-items-center">
             <div className="absolute w-full h-[2px] bg-current"></div>
@@ -34,7 +36,9 @@ const Accordian = ({ question, answer }) => {
           }`}
         >
           <div className="overflow-hidden">
-            <p className="pb-7 font-interTight font-medium">{answer}</p>
+            <p className="text-xs xs:text-sm sm:text-base pb-4 sm:pb-7 font-interTight font-medium">
+              {answer}
+            </p>
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ const Faqs = () => {
 
         <div className="h-[1px] bg-current w-full"></div>
 
-        <h2 className="text-[88px] font-druk leading-[0.8em] mt-2 max-w-[700px]">
+        <h2 className="text-[max(33px,9vw)] xs:text-[48px] sm:text-[60px] md:text-[68px] lg:text-[80px] xl:text-[88px] font-druk leading-[0.8em] mt-2 max-w-[700px]">
           THE FACTS
         </h2>
 

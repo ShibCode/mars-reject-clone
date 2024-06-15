@@ -29,26 +29,28 @@ const Story = () => {
   }, []);
 
   return (
-    <div className="text-lightRed flex flex-col gap-10 items-center text-center min-h-screen -mt-[250px] bg-purpleRadial">
-      <span className="text-2xl font-druk leading-[0.8em]">story</span>
+    <div className="text-lightRed flex flex-col gap-7 sm:gap-8 lg:gap-10 items-center text-center min-h-screen -mt-[250px] bg-purpleRadial w-full">
+      <span className="text-xl xs:text-2xl font-druk leading-[0.8em]">
+        story
+      </span>
 
       <div className="w-[100px] h-[1px] bg-current"></div>
 
-      <h2 className="text-[88px] font-druk leading-[0.8em] mt-2 max-w-[900px]">
+      <h2 className="heading-primary font-druk leading-[0.8em] mt-2 max-w-[11.25em] w-[90%]">
         THE BEGINNING OF THE END
       </h2>
 
-      <div className="flex gap-3 my-4">
-        <div className="w-[42px]">
+      <div className="flex gap-3 my-2 sm:my-4">
+        <div className="w-[32px] sm:w-[36px] lg:w-[42px]">
           <CircleDoubleLineThrough />
         </div>
 
-        <div className="w-[42px] aspect-square bg-current rounded-full"></div>
+        <div className="w-[32px] sm:w-[36px] lg:w-[42px] aspect-square bg-current rounded-full"></div>
       </div>
 
       <p
         ref={para}
-        className="text-lg !leading-[1.5] font-crime font-bold max-w-[610px]"
+        className="sm:text-lg !leading-[1.5] font-crime font-bold max-w-[610px] w-[90%]"
       >
         <span className="para-span">
           The Doomsday Clock has moved too close to midnight to turn back the
