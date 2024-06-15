@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { duplicate } from "../../utils/duplicate";
-import { ScrollTrigger } from "gsap/all";
 import CircleLineThrough from "../../svg/CircleLineThrough";
 import CircleDoubleLineThrough from "../../svg/CircleDoubleLineThrough";
 import MatrixCode from "../../svg/MatrixCode";
@@ -26,10 +25,7 @@ const backCharacters = [
 ];
 
 const Hero = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
   const wrapper = useRef();
-  const contentWrapper = useRef();
   const characterSlideShow = useRef();
   const para = useRef();
   const signature = useRef();
@@ -58,9 +54,10 @@ const Hero = () => {
     });
 
     const heroTrigger = {
-      trigger: contentWrapper.current,
-      start: "50 top",
+      trigger: ".content-wrapper",
+      start: "50px top",
       end: "+=100",
+      // markers: true,
       scrub: 1,
     };
 
@@ -84,7 +81,7 @@ const Hero = () => {
       backgroundColor: "#f74a53",
     });
 
-    gsap.to(contentWrapper.current, {
+    gsap.to(".content-wrapper > *", {
       scrollTrigger: heroTrigger,
       scale: 1.1,
     });
@@ -107,16 +104,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={wrapper} className="h-screen relative z-0 flex text-lightRed">
-      <div
-        ref={contentWrapper}
-        className="w-full flex flex-col items-center text-center justify-center gap-2.5 sm:gap-4 md:gap-6"
-      >
+    <div
+      ref={wrapper}
+      className="h-screen w-full relative z-0 flex text-lightRed"
+    >
+      {/* <div className="w-full overflow-hidden"> */}
+      <div className="content-wrapper w-full flex flex-col items-center text-center justify-center gap-2.5 sm:gap-4 md:gap-6">
         <div className="relative w-[min(20vw,100px)] sm:w-[130px] grid place-items-center">
           <Logo />
         </div>
 
-        <h1 className="text-[min(8vw,52px)] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[140px] leading-[0.8em] font-druk mt-4">
+        <h1 className="text-[min(8vw,52px)] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[120px] leading-[0.8em] font-druk mt-4">
           MARS <br /> REJECTS
         </h1>
 
@@ -136,6 +134,7 @@ const Hero = () => {
           className="w-[80px] sm:w-[110px] mt-2 sm:mt-4 opacity-0"
         />
       </div>
+      {/* </div> */}
 
       <div className="absolute inset-0 bg-redRadial opacity-25"></div>
 
@@ -162,7 +161,7 @@ const Hero = () => {
       </div>
 
       <div ref={characterSlideShow} className="absolute inset-0">
-        <div className="flex items-end absolute bottom-0 z-10">
+        <div className="flex items-end absolute bottom-0 z-10 overflow-x-hidden">
           {duplicate(frontCharacters, 4).map((character, index) => (
             <img
               key={index}
@@ -173,7 +172,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <div className="flex items-end absolute bottom-0">
+        <div className="flex items-end absolute bottom-0 overflow-x-hidden">
           {duplicate(backCharacters, 4).map((character, index) => (
             <img
               key={index}

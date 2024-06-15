@@ -40,27 +40,38 @@ const Collections = () => {
       },
     });
 
-    gsap.to(slideshow1.current, {
+    // gsap.to(slideshow1.current, {
+    //   scrollTrigger: {
+    //     trigger: slideshow1.current,
+    //     toggleActions: "play pause resume pause",
+    //   },
+    //   xPercent: -100,
+    //   duration: firstSlideShow.length * 12,
+    //   repeat: Infinity,
+    //   ease: "none",
+    // });
+
+    gsap.to(".slideshow-1-img", {
       scrollTrigger: {
         trigger: slideshow1.current,
         toggleActions: "play pause resume pause",
       },
-      xPercent: -100,
-      duration: firstSlideShow.length * 12,
+      xPercent: firstSlideShow.length * -100,
+      duration: firstSlideShow.length * 9,
       repeat: Infinity,
       ease: "none",
     });
 
     gsap.fromTo(
-      slideshow2.current,
-      { xPercent: -100 },
+      ".slideshow-2-img",
+      { xPercent: secondSlideShow.length * -100 },
       {
         scrollTrigger: {
           trigger: slideshow2.current,
           toggleActions: "play pause resume pause",
         },
         xPercent: 0,
-        duration: secondSlideShow.length * 15,
+        duration: secondSlideShow.length * 11,
         repeat: Infinity,
         ease: "none",
       }
@@ -92,9 +103,17 @@ const Collections = () => {
         </button>
       </div>
 
-      <ul ref={slideshow1} className="w-[100vw] max-w-[2000px] flex">
+      <ul
+        ref={slideshow1}
+        className="w-[100vw] max-w-[2000px] flex overflow-x-hidden"
+      >
         {duplicate(firstSlideShow, 4).map((img, i) => (
-          <img key={i} src={img} alt="..." className="min-w-[20%] px-2" />
+          <img
+            key={i}
+            src={img}
+            alt="..."
+            className="min-w-[20%] px-2 slideshow-1-img"
+          />
         ))}
       </ul>
 
@@ -111,9 +130,17 @@ const Collections = () => {
         ))}
       </div>
 
-      <ul ref={slideshow2} className="w-[100vw] max-w-[2000px] flex">
+      <ul
+        ref={slideshow2}
+        className="w-[100vw] max-w-[2000px] flex overflow-x-hidden"
+      >
         {duplicate(secondSlideShow, 4).map((img, i) => (
-          <img key={i} src={img} alt="..." className="min-w-[20%] px-2" />
+          <img
+            key={i}
+            src={img}
+            alt="..."
+            className="min-w-[20%] px-2 slideshow-2-img"
+          />
         ))}
       </ul>
     </div>

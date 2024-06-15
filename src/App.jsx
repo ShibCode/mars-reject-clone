@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import Home from "./pages/Home";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const App = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -9,7 +13,6 @@ const App = () => {
   return (
     <>
       <Home />
-      {/* <div className="h-screen"></div> */}
     </>
   );
 };
