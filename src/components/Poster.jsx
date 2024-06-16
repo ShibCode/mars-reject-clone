@@ -152,7 +152,7 @@ const Poster = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`w-full flex text-[22px] font-tightSpot italic text-blueCharcoal leading-[1.05] ${
+              className={`w-full flex text-[19px] xs:text-[22px] font-tightSpot italic text-blueCharcoal leading-[1.05] ${
                 card.align
               } ${
                 card.align === "justify-center" ? "text-center" : "text-start"
@@ -170,7 +170,7 @@ const Poster = () => {
         </div>
 
         <div className="max-w-[450px] w-full sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-          <div className="relative poster h-[95vh] max-h-[662px] w-[90%]">
+          <div className="relative poster h-[95vh] max-h-[662px] w-[90%] flex justify-center">
             <img
               src="/poster-1.jpg"
               alt="..."

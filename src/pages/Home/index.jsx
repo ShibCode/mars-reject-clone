@@ -18,7 +18,9 @@ const Home = () => {
       <Roadmap />
       <Team />
       <Faqs />
-      <Banner />
+      <div className="w-full overflow-hidden">
+        <Banner />
+      </div>
     </>
   );
 };

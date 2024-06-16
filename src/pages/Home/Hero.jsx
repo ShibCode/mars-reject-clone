@@ -48,7 +48,7 @@ const Hero = () => {
     gsap.to(wrapper.current, {
       scrollTrigger: {
         trigger: wrapper.current,
-        end: "+=600",
+        end: "+=1000",
         pin: true,
       },
     });

@@ -11,7 +11,7 @@ const benefits = [
 const AboutArt = () => {
   return (
     <div className="flex justify-center text-lightRed about-art-section transition-all duration-300 -mt-6 xs:-mt-3 sm:-mt-8 lg:-mt-4">
-      <div className="max-w-[645px] w-[90%] flex flex-col gap-16 xs:gap-20">
+      <div className="max-w-[645px] w-[90%] flex flex-col gap-12 xs:gap-16 sm:gap-20">
         <div className="flex flex-col gap-5 sm:gap-10">
           <div className="h-[1px] bg-current mb-4 sm:mb-0"></div>
 
