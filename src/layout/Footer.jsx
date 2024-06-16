@@ -179,10 +179,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex text-white text-xl justify-center gap-4">
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faInstagram} />
-              <FontAwesomeIcon icon={faTiktok} className="text-lg" />
+            <div className="flex text-white justify-center gap-4 items-center">
+              <FontAwesomeIcon icon={faTwitter} className="text-[19px]" />
+              <img src="/instagram.svg" alt="instagram" className="w-4 h-4" />
+              <img src="/tiktok.svg" alt="tiktok" className="h-4" />
             </div>
           </div>
         </div>
