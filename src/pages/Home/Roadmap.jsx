@@ -157,7 +157,7 @@ const ReleasedIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 14 10.706"
       id="svg2570827119"
       className="w-3 xs:w-[13px]"

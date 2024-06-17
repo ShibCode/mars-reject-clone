@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Footer from "./layout/Footer";
+import Navigation from "./layout/Navigation";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <>
+      <Navigation />
       <Home />
       <Footer />
     </>
