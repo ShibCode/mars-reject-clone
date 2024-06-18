@@ -17,6 +17,11 @@
 }
 
 @font-face {
+  font-family: Druk Condensed;
+  src: url("/fonts/druk-cond-super.otf");
+}
+
+@font-face {
   font-family: Crime Fighter BB;
   src: url("/fonts/crimefighter-bold.TTF");
   font-weight: 700;
@@ -48,6 +53,11 @@
   src: url("/fonts/tightspotbb-italic.ttf");
   font-weight: 400;
   font-style: italic;
+}
+
+html {
+  scroll-padding: 1rem;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -16,32 +16,28 @@ const Navigation = () => {
 
   return (
     <div className="h-[78px] w-[0px] fixed bottom-[6vh] left-1/2 -translate-x-1/2 flex z-20 isolate overflow-y-clip">
-      <div
-        style={{
-          transition:
-            "background-color 200ms, transform cubic-bezier(.23,.6,.3,.87) 350ms, left cubic-bezier(.23,.6,.3,.87) 350ms, bottom cubic-bezier(.23,.6,.3,.87) 350ms, opacity cubic-bezier(.23,.6,.3,.87) 350ms",
-        }}
-        className={`absolute w-[54px] h-[54px] grid place-items-center cursor-pointer bg-[rgba(2,17,32,0.5)] backdrop-blur-[5px] rounded-full hover:bg-[#f74a53] ${
+      <a
+        href="#"
+        style={{ transition: "all cubic-bezier(.23,.6,.3,.87) 350ms" }}
+        className={`absolute w-[54px] h-[54px] grid place-items-center rounded-full bg-[#02112080] before:absolute before:inset-0 before:rounded-full before:-z-10 before:bg-[#f74a53] before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 ${
           isExpanded
             ? "left-1/2 -translate-x-[50%] bottom-[0%] translate-y-[100%] opacity-0"
             : "left-0 translate-x-[calc(-200%-20px-39px)] bottom-[50%] translate-y-[50%] opacity-100"
         }`}
       >
         <img src="/mail.svg" alt="mail" className="w-6" />
-      </div>
-      <div
-        style={{
-          transition:
-            "background-color 200ms, transform cubic-bezier(.23,.6,.3,.87) 350ms, left cubic-bezier(.23,.6,.3,.87) 350ms, bottom cubic-bezier(.23,.6,.3,.87) 350ms, opacity cubic-bezier(.23,.6,.3,.87) 350ms",
-        }}
-        className={`absolute w-[54px] h-[54px] grid place-items-center cursor-pointer bg-[rgba(2,17,32,0.5)] backdrop-blur-[5px] rounded-full hover:bg-[#f74a53] transition-colors duration-200 ${
+      </a>
+      <a
+        href="#"
+        style={{ transition: "all cubic-bezier(.23,.6,.3,.87) 350ms" }}
+        className={`absolute w-[54px] h-[54px] grid place-items-center rounded-full bg-[#02112080] before:absolute before:inset-0 before:rounded-full before:-z-10 before:bg-[radial-gradient(126.963%_126.963%_at_6.4719%_97.8093%,rgb(250,143,33)_9%,rgb(216,45,126)_78%)] before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 ${
           isExpanded
             ? "left-1/2 -translate-x-[50%] bottom-[0%] translate-y-[100%] opacity-0"
             : "left-0 translate-x-[calc(-100%-10px-39px)] bottom-[50%] translate-y-[50%]"
         }`}
       >
         <img src="/instagram.svg" alt="instagram" className="w-6" />
-      </div>
+      </a>
 
       <div
         style={{ transitionTimingFunction: "cubic-bezier(.23,.6,.3,.87)" }}
@@ -76,7 +72,7 @@ const Navigation = () => {
           ></div>
 
           <a
-            href="#home"
+            href="#top"
             className="flex items-center px-5 hover:text-[rgb(132,19,30)] rounded-full transition-colors duration-300"
             onMouseEnter={handleHover}
           >
@@ -120,32 +116,37 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div
-        style={{
-          transition:
-            "background-color 200ms, transform cubic-bezier(.23,.6,.3,.87) 350ms, right cubic-bezier(.23,.6,.3,.87) 350ms, bottom cubic-bezier(.23,.6,.3,.87) 350ms, opacity cubic-bezier(.23,.6,.3,.87) 350ms",
-        }}
-        className={`absolute w-[54px] h-[54px] grid place-items-center cursor-pointer bg-[rgba(2,17,32,0.5)] backdrop-blur-[5px] rounded-full hover:bg-[rgb(29,155,240)] transition-colors duration-200 ${
+      <a
+        href="#"
+        style={{ transition: "all cubic-bezier(.23,.6,.3,.87) 350ms" }}
+        className={`group absolute w-[54px] h-[54px] grid place-items-center rounded-full bg-[#02112080] before:absolute before:inset-0 before:rounded-full before:-z-10 before:bg-white before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 ${
           isExpanded
             ? "right-1/2 translate-x-[50%] bottom-[0%] translate-y-[100%] opacity-0"
             : "right-0 translate-x-[calc(200%+20px+39px)] bottom-[50%] translate-y-[50%]"
         }`}
       >
-        <FontAwesomeIcon icon={faTwitter} className="text-white text-[23px]" />
-      </div>
-      <div
-        style={{
-          transition:
-            "background-color 200ms, transform cubic-bezier(.23,.6,.3,.87) 350ms, right cubic-bezier(.23,.6,.3,.87) 350ms, bottom cubic-bezier(.23,.6,.3,.87) 350ms, opacity cubic-bezier(.23,.6,.3,.87) 350ms",
-        }}
-        className={`absolute w-[54px] h-[54px] grid place-items-center cursor-pointer bg-[rgba(2,17,32,0.5)] backdrop-blur-[5px] rounded-full hover:bg-[#f74a53] transition-colors duration-200 ${
+        <img
+          src="/tiktok.svg"
+          alt="tiktok"
+          className="transition-opacity duration-200 w-6 absolute group-hover:opacity-0"
+        />
+        <img
+          src="/tiktok-colorful.svg"
+          alt="tiktok"
+          className="transition-opacity duration-200 w-6 absolute opacity-0 group-hover:opacity-100"
+        />
+      </a>
+      <a
+        href="#"
+        style={{ transition: "all cubic-bezier(.23,.6,.3,.87) 350ms" }}
+        className={`absolute w-[54px] h-[54px] grid place-items-center rounded-full bg-[#02112080] before:absolute before:inset-0 before:rounded-full before:-z-10 before:bg-[#1d9bf0] before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 ${
           isExpanded
             ? "right-1/2 translate-x-[50%] bottom-[0%] translate-y-[100%] opacity-0"
             : "right-0 translate-x-[calc(100%+10px+39px)] bottom-[50%] translate-y-[50%]"
         }`}
       >
-        <img src="/tiktok.svg" alt="tiktok" className="w-6" />
-      </div>
+        <FontAwesomeIcon icon={faTwitter} className="text-white text-[23px]" />
+      </a>
     </div>
   );
 };

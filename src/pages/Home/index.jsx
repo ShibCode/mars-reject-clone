@@ -11,6 +11,7 @@ import Banner from "./Banner";
 const Home = () => {
   return (
     <>
+      <div id="top"></div>
       <Hero />
       <Story />
       <Collections />

@@ -51,7 +51,7 @@ const faqsData = [
 
 const Faqs = () => {
   return (
-    <div className="mt-[150px]">
+    <div className="mt-[150px]" id="faq">
       <div className="max-w-[1200px] w-[90%] mx-auto flex flex-col gap-10 items-start text-lightRed">
         <span className="text-2xl font-druk leading-[0.8em]">faqs</span>
 

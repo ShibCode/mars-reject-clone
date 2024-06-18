@@ -67,6 +67,7 @@ const Roadmap = () => {
   return (
     <div
       ref={wrapper}
+      id='roadmap'
       className="flex flex-col items-center mt-[100px] sm:mt-[200px] roadmap-section"
     >
       <div className="text-lightRed w-full max-w-[1100px] flex flex-col items-center gap-6 sm:gap-8">

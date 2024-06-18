@@ -29,7 +29,10 @@ const Story = () => {
   }, []);
 
   return (
-    <div className="text-lightRed flex flex-col gap-7 sm:gap-8 lg:gap-10 items-center text-center min-h-screen -mt-[250px] bg-purpleRadial w-full">
+    <div
+      id="story"
+      className="text-lightRed flex flex-col gap-7 sm:gap-8 lg:gap-10 items-center text-center min-h-screen -mt-[250px] bg-purpleRadial w-full"
+    >
       <span className="text-xl xs:text-2xl font-druk leading-[0.8em]">
         story
       </span>

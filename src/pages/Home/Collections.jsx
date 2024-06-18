@@ -70,6 +70,7 @@ const Collections = () => {
   return (
     <div
       ref={wrapper}
+      id="collection"
       className="text-lightRed my-[80px] sm:my-[125px] flex flex-col gap-8 xs:gap-10 md:gap-14"
     >
       <div className="max-w-[1200px] w-[90%] mx-auto flex flex-col gap-6 xs:gap-7 sm:gap-8 md:gap-10 items-start">

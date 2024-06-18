@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         druk: "Druk Wide Super",
         drukMedium: "Druk Wide Medium",
+        drukCond: "Druk Condensed",
         interTight: "Inter Tight",
         inter: "Inter",
         crime: "Crime Fighter BB",
