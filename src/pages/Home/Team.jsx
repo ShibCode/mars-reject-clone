@@ -3,6 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 
+const teamData = [
+  {
+    name: "/team/pepe-torrado/name.avif",
+    face: "/team/pepe-torrado/face.png",
+    role: "PFP Art & Visual Design",
+  },
+  {
+    name: "/team/josh-seff/name.avif",
+    face: "/team/josh-seff/face.png",
+    role: "Marketing & Community",
+  },
+  {
+    name: "/team/pablo-alcalde/name.avif",
+    face: "/team/pablo-alcalde/face.png",
+    role: "Comic Book Art",
+  },
+];
+
 const Team = () => {
   const wrapper = useRef();
 
@@ -53,10 +71,10 @@ const Team = () => {
           Join forces with us!
         </button>
 
-        <div className="flex gap-6">
-          <Member />
-          <Member />
-          <Member />
+        <div className="flex gap-4 sm:gap-6 flex-wrap justify-center w-full">
+          {teamData.map((member, index) => (
+            <Member key={index} {...member} />
+          ))}
         </div>
       </div>
     </div>
@@ -65,21 +83,25 @@ const Team = () => {
 
 export default Team;
 
-const Member = () => {
+const Member = ({ name, face, role }) => {
   return (
     <div className="relative flex flex-col w-full max-w-[270px]">
       <div className="relative">
         <img src="/team/bg-sky.avif" alt="bg" />
 
         <div className="absolute top-0 w-[85%] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center h-full -space-y-[4%]">
-          <img src="/team/pepe-torrado/name.avif" alt="pepe torrado" />
-          <img src="/team/pepe-torrado/face.png" alt="face" />
+          <img
+            src={name}
+            alt="pepe torrado"
+            className="aspect-[221/77] w-full"
+          />
+          <img src={face} alt="face" />
         </div>
       </div>
 
       <div className="bg-blueCharcoal h-10 flex items-center justify-center">
         <p className="uppercase text-white font-drukMedium text-[12px] tracking-[-0.5px]">
-          PFP Art & Visual Design
+          {role}
         </p>
       </div>
 
@@ -117,12 +139,12 @@ const Member = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 border-[5px] border-blueCharcoal pointer-events-non"></div>
+      <div className="absolute inset-0 border-[5px] border-blueCharcoal pointer-events-none"></div>
 
       <img
         src="/team/bg-scratches.png"
         alt="bg"
-        className="absolute top-0 left-0 pointer-events-non"
+        className="absolute top-0 left-0 pointer-events-none"
       />
     </div>
   );

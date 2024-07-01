@@ -56,8 +56,7 @@
 }
 
 html {
-  scroll-padding: 1rem;
-  scroll-behavior: smooth;
+  @apply scroll-p-4 scroll-smooth;
 }
 
 body {

@@ -107,7 +107,6 @@ const Hero = () => {
       ref={wrapper}
       className="h-screen w-full relative z-0 flex text-lightRed"
     >
-      {/* <div className="w-full overflow-hidden"> */}
       <div className="content-wrapper w-full flex flex-col items-center text-center justify-center gap-4 md:gap-6">
         <div className="relative w-[90px] sm:w-[130px] flex justify-center -mb-2 sm:mb-0">
           <Logo />
@@ -133,11 +132,14 @@ const Hero = () => {
           className="w-[80px] sm:w-[110px] mt-2 sm:mt-4 opacity-0"
         />
       </div>
-      {/* </div> */}
 
       <div className="absolute inset-0 bg-redRadial opacity-25"></div>
 
       <div className="absolute inset-4 sm:inset-6 md:inset-10 z-20">
+        <h6 className="absolute top-0 left-1/2 -translate-x-1/2 font-druk text-sm text-[15px] lg:text-base">
+          CLONE
+        </h6>
+
         <div className="w-[16px] absolute top-0 left-0 h-[16px] border border-current rounded-full"></div>
 
         <div className="w-[17px] absolute top-0 right-0">
